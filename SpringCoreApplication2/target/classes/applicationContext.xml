@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Configure XML file for it search on google spring core docs Go 
+XML-based configuration metadata and paste here bean to bean
+ -->
+ <beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Register java  class with spring container here and making it as bean class  -->
+    <bean id="mb" class="com.masai.MyBusinessClass" />  
+    <bean id="b" class="com.masai.Bike" />  
+    <bean id="c" class="com.masai.Car" />  
+<!-- collaborators and configuration for this bean go here -->
+<!-- Because Travel class contain some dependency so add that property  -->
+       
+<bean id="t" class="com.masai.Travel">
+<!-- When we are using setter injection providing the dependency value is not mandatory -->
+ 
+ <!-- injecting Object dependency -->
+ <!--  
+<property name="v" ref="c"/> -->
+<!-- //injecting simple value -->
+<!--  
+<property name="Name" value="Suman" />  -->
+
+<!-- for constructor injection  -->
+<constructor-arg ref="b"/>
+<constructor-arg value="VijayPrakash"/>
+</bean>
+  
+
+</beans>
