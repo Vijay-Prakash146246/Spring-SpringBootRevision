@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Registered java class with container -->
+    <bean id="a" class="com.masai.A" >
+  <!--    <constructor-arg ref="b" />  -->
+  <property name="b1" ref="b" />
+    </bean>
+        <!-- collaborators and configuration for this bean go here -->
+
+    <bean id="b" class="com.masai.B" >
+    <constructor-arg ref="a" />  
+    </bean>
+
+    <!-- more bean definitions go here -->
+
+</beans>
