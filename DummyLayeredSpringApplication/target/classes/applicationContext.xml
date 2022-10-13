@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Configure XML file for it search on google spring core docs Go 
+XML-based configuration metadata and paste here bean to bean
+ -->
+ <beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Register java  class with spring container here and making it as bean class  -->
+<bean id="db" class="com.masai.DAOBean" />
+<bean id="sb" class="com.masai.ServiceBean" >
+<property name="dao" ref="db"/>
+</bean>
+<bean id="pb" class="com.masai.PresentationBean" >
+<property name="service" ref="sb"/>
+</bean>
+  
+
+</beans>
