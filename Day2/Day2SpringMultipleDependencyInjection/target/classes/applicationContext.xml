@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        
+<!-- Here we are registering our java  class  to make it beans class -->
+    <bean id="mb" class="com.masai.MyBusinessClass">  </bean>
+    <bean id="c" class="com.masai.Car">  </bean>
+    <bean id="b" class="com.masai.Bike">  </bean>
+    <!-- because Travel class contain dependency so add property -->
+    
+    <bean id="t" class="com.masai.Travel">  
+    <!-- Adding dependency using setter injection 
+    <property name="v" ref="c"> </property>
+    <property name="name" value="TataBenz"> </property> -->
+    
+    
+    <!-- Adding dependency using setter injection -->
+    <constructor-arg ref="b"></constructor-arg>
+    <constructor-arg value="Honda"></constructor-arg>
+    </bean>
+
+
+
+</beans>
