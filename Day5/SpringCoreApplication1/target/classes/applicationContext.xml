@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- registered class with configuration file or we can say that these are bean class -->
+    <bean id="mb" class="com.masai.MyBusinessClass" />  
+    <bean id="c" class="com.masai.Car" />
+    <bean id="b" class="com.masai.Bike" />
+    <bean id="t" class="com.masai.Travel" >
+    <!-- because Travel class has a dependency  -->
+    <property name="v" ref="c" />
+    <property name="name" value="Vijay_Prakash" />
+    </bean>
+    
+    
+        <!-- collaborators and configuration for this bean go here -->
+         <!-- more bean definitions go here -->
+
+</beans>
