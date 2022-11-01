@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        
+<!-- Here we are registering our java  class  to make it beans class -->
+	<bean id="s1" class="com.masai.Student">
+	<constructor-arg name="roll" value="100"/>
+	<constructor-arg name="name" value="Raj"/>
+	<constructor-arg name="marks" value="700"/>
+	</bean>
+	<bean id="s2" class="com.masai.Student">
+	<constructor-arg name="roll" value="102"/>
+	<constructor-arg name="name" value="Simran"/>
+	<constructor-arg name="marks" value="720"/>
+	</bean>
+	<bean id="s3" class="com.masai.Student">
+	<constructor-arg name="roll" value="104"/>
+	<constructor-arg name="name" value="Rajesh"/>
+	<constructor-arg name="marks" value="750"/>
+	</bean>
+	<bean id="aid" class="com.masai.A">
+	<property name="theMap">
+	<map>
+	<entry key-ref="s1" value="NIT"/>
+	<entry key-ref="s2" value="GIET"/>
+	<entry key-ref="s3" value="AMITY"/>
+	</map>
+	</property>
+	</bean>
+
+
+</beans>
