@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.JUnitTesting.MathUtilsTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.354 s - in com.JUnitTesting.MathUtilsTest
